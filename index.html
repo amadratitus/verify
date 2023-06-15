@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta http-equiv="refresh" content="1">
+    <meta http-equiv="refresh" content="1000000000000000000">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="theme-color" content="#f8f9fa"/>
     <meta name="description" content="Kyambogo University Computer Science Association"/>
@@ -33,13 +33,13 @@
         
         <div class="card-body">
           <h6 class="text-center fw-bold text-warning">Membership Verification Portal</h6>
-          <form method="post" action="">
+          <form method="post" id="forms">
             <div class="mb-4 mt-2">
               <label for="regNo" class="form-label fw-bold">Reg Number:</label>
-              <input type="text" class="form-control" id="regNo" placeholder="Enter registration number" name="regNumber">
+              <input type="text" class="form-control" id="regNumber" placeholder="Enter registration number" name="regNumber" required>
             </div>
             <div class="d-flex pt-2 justify-content-center">
-                <button class="flex-fill p-2 btn btn-primary fw-bold mx-auto d-block" data-bs-toggle="modal" data-bs-target="#myModalStudent">
+                <button class="flex-fill p-2 btn btn-primary fw-bold mx-auto d-block">
                 Check
                 </button>
               </div>
@@ -49,18 +49,18 @@
       <!--Card Ends-->
 
       <!-- The Modal -->
-    <div class="modal" id="myModalStudent">
+    <div class="modal fade" id="myModal">
       <div class="modal-dialog modal-dialog-centered">
         <div class="modal-content">
-    
           <!-- Modal Header -->
-          <div class="modal-header bg-light" style="height:3em;">
-            <h4 class="modal-title text-primary">Student Login</h4>
-            <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+          <div class="modal-header bg-opacity-50 justify-content-center" style="height:3em;">
+            <h4 class="modal-title text-primary">Member Information</h4>
           </div>
-    
           <!-- Modal body -->
           <div class="modal-body">
+            <div class="p-3 justify-content-center">
+                <strong id="result" class="fw-bolder"></strong><strong class="pl-1">you are not a registered member.</strong>
+            </div>
           </div>
         </div>
       </div>
@@ -78,7 +78,33 @@
     <!--Footer End-->
     </div>
     </div>
-    
-    
+    <!--Script-->
+    <script>
+    // Get the form and input element
+    const form = document.getElementById('forms');
+    const regNumber = document.getElementById('regNumber');
+    const modal = new bootstrap.Modal('#myModal');
+
+    // Add submit event listener to the form
+    form.addEventListener('submit', (e) => {
+    e.preventDefault(); // Prevent form submission
+
+    //arrays of registered
+    const members = [""]
+    // Get the input value
+    const inputValue = regNumber.value;
+
+    // Display the input value inside the modal
+    const modalBody = document.getElementById('result');
+    modalBody.textContent = inputValue;
+
+    // Clear the form input
+    regNumber.value = '';
+
+    // Show the modal
+    modal.show();
+
+    });
+    </script>
     </body>
     </html>    
