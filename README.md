@@ -1,2 +1,1 @@
-# verify
-KYUCSA Membership verification portal
+# <center>**KYUCSA MEMBERSHIP VERIFICATION PORTAL**</center>
