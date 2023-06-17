@@ -16,56 +16,66 @@
     }
     </style>
 </head>
-<body class="bg-light-subtle">
-    <!--Contentbody-->
-    <div class="d-flex justify-content-center vh-100">
-        <!--Form input-->
-        <div class="container mt-3">
-            <h4>Membership Verification</h4>
-            <form method="post" action="">
-              <div class="mb-3 mt-3">
-                <label for="text">Registration Number:</label>
-                <input type="text" class="form-control" id="regNo" placeholder="Enter reg number" name="regNumber">
+<body style="background-color: #f8f9fa;">
+
+    <div class="container-fluid">
+      <div class="flex text-center text-success mt-4 mb-5">
+        <img class="card-img-top mx-auto d-block pt-2" src="logo.png" style="width:120px;">
+        <h6>Kyambogo University Computer Science Association</h6>
+        <h6>KYUCSA</h6>
+      </div>
+      <div class="container d-flex align-items-center justify-content-center mb-0">
+      <!--The card Start-->
+      <div class="card" style="width:400px">
+        
+        <div class="card-body">
+          <h6 class="text-center font-weight-bold text-info">Membership Verification Portal</h6>
+          <form method="post" action="">
+            <div class="mb-2 mt-2">
+              <label for="regNo" class="form-label">Reg Number:</label>
+              <input type="text" class="form-control" id="regNo" placeholder="Enter registration number" name="regNumber">
+            </div>
+            <div class="d-flex p-3 justify-content-center">
+                <button class="flex-fill m-3 p-2 btn btn-primary mx-auto d-block" data-bs-toggle="modal" data-bs-target="#myModalStudent">
+                Check
+                </button>
               </div>
-              <div class="form-check mb-3">
-                <button type="submit" class="btn btn-primary">Check</button>
-              </div>
-            </form>
-          </div>
-    </div>
-    <!--model for showing result-->
-    <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#myModal">
-        Open modal
-      </button>
-    </div>
-    
-    <!-- The Modal -->
-    <div class="modal fade" id="myModal">
-      <div class="modal-dialog model-sm">
+          </form>
+        </div>
+        </div>
+      <!--Card Ends-->
+
+      <!-- The Modal -->
+    <div class="modal" id="myModalStudent">
+      <div class="modal-dialog modal-dialog-centered">
         <div class="modal-content">
     
           <!-- Modal Header -->
-          <div class="modal-header">
-            <h4 class="modal-title">Modal Heading</h4>
+          <div class="modal-header bg-light" style="height:3em;">
+            <h4 class="modal-title text-primary">Student Login</h4>
             <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
           </div>
     
           <!-- Modal body -->
           <div class="modal-body">
-            Modal body..
           </div>
         </div>
       </div>
     </div>
+        </div>
+    <div class="row">
     <!--Footer-->
-    <nav class="navbar navbar-expand-sm justify-content-center fixed-bottom">
-        <ul class="navbar-nav">
-          <li class="nav-item">
-            &copy; 2023 All Rights Reserved kyucsa
-            <br>
-            Powered By <a class="nav-link" href="#">iChris Technologies</a>
-          </li>
-        </ul>
-      </nav>
-</body>
-</html>
+    <nav class="navbar navbar-expand-sm bg-light justify-content-center fixed-bottom">
+      <ul class="navbar-nav">
+        <li class="nav-item d-flex">
+          <p>&copy; 2023 All Rights Reserved kyucsa &middot; Powered By iChris Technologies</p>
+        </li>
+      </ul>
+    </nav>
+    <!--Footer End-->
+    </div>
+    </div>
+    
+    
+    </body>
+    </html>    
